@@ -16,7 +16,7 @@ from operator import itemgetter
 from time import sleep
 
 #from google.appengine.lib.requests import requests
-from google.appengine.dist27 import httplib
+#from google.appengine.dist27 import httplib
 
 import requests
 #from google.appengine.api import users
@@ -28,6 +28,7 @@ import webapp2
 from webapp2_extras import json
 import sys
 
+from google.appengine.dist27 import httplib
 logging.info(sys.version)
 logging.info("_START")
 
