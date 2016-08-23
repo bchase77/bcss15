@@ -1,5 +1,6 @@
-#!C:\\Python27\\python
+#!/usr/bin/env python
 
+######!C:\\Python27\\python
 from __future__ import print_function
 
 # Copyright 2016 Bryan Chase
