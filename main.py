@@ -28,7 +28,9 @@ import webapp2
 from webapp2_extras import json
 import sys
 
-#from google.appengine.dist27 import httplib
+
+
+
 import httplib
 logging.info(sys.version)
 logging.info("_START")
