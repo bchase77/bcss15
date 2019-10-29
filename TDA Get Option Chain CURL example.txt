@@ -1,0 +1,108 @@
+curl -X GET --header "Authorization: Bearer "Kov/rZ/d+b4gSnAIuhgM1YQ3vjutM2ZMBXFIw//LC5qIdpy+CIptLzYYAktZFUNiwyYBuHtA4DPF0nJpOidmZ9g3hRXwU2gLJjbjtr0jD8LCt80DYTJ2xU6KfK0YFk3gkR+K/Jn6zbYMtXfyqy19p/Hc7s00h+rhPViCWyGTyi2DhtDfQ1/WhPUp0bPf6fCECQYsGOu9DbGTYW3EqBCdd1nM5TrZtYHpvwyVcspteEAWA1A9+lboODw21z1cgvXFZQ1QghajyGbD55ZtmKURiXOmAfcEQSR8vZ7LafnrauEIP7ENdgTpz3ZKQmtKztDGj8QKrGSi+3bW++A8hwrDwzyUiQ5W0BvjuA7Q+PKIQ4KQD5Y+UgaekARrwuagCl//jIxhogCzaA/IhmzFqyAf1DaJjkD44vInZI0PvrZ3/5BMGq1Qj6BYS/Il4TgRKDZra95ppiC0MU2whDMUKnZr05csFSBDGtus03OA6ooS8a3t0LeZQbO0jUnrVI26vmFBf6Lz/68OcQCIPizcGnFb810win8VMekZ5w04BKCdPOW0GOAZubI+vB/YKZS100MQuG4LYrgoVi/JHHvl5M4dHXYSFK+kj0udwnyjod9Xw0zqtTBtbttw8PXXseQMm49yssYbWt0xkbDXeGCsHzpX61U50+NoaTLHKlKqJIjD2QV4MYTPCBRABTRL6VVJbuGK4uGDLtM7K58yd5l3kBYrb/zm8s1dxgXQ0OVLm7pRsNJS7G/aoXyP5rVPl68t9xRd1Lp0ICz9UNjpdhawb2MFG+YYpjE8BDI+XaBnp4RhleolWMMp+kZXzsu2K7iaEIXjsA527UYO0aFzzBWx2bsdTKAPJJ5PhDKKtw3KwhuzM4WxLOS48B8gzWftnM8EJTJo7Frh4e3Rzo6dvSU2N8A7yu1H30Q2WlOi3IWlulLhNH9sOg774dJaF9Ht6O1g0nDz9NDhCsdRK4LlRCQOlrLiH2fRNTCTlNQyuOx+3dMposav1i+F8Bpl0iTfVQMIZfTKtFHoFWPHQyT84eKtc6OOACgNW9Op/U3w02Vu36xyP2XY3aiuxywbwWEn9wD4KnT/9pSNaXz2qTglnR/9f3sAXcEUhtRYlizH4MkYxQlWsQW8E4ZqCLL0tUZFdo68qc/J3US1Qt3wwfk=212FD3x19z9sWBHDJACbC00B75E"" --header "Authorization: Bearer 4eVJgT/udCy61qvt7WfI6XTXe12mqyC3NpXSTIbEhayGAnTuxf+Gpa3odwD+yxFBBjRqlavHtImxuqwtxcd/WMaBKUFt9hi/LrfNtYoqVZ7NClN1IXULvVBhRjVfAGpSJXgn02CqYLc0y0HgHDyEMKRsqN9x+9f4w07qTwxBPw4zAbKSxHt33yJcqzaPVDMXWAbs4OnBQlJamI2n3Ng9ITF4HZ4DpKqQDr83pzYkTVuBeLnNnstJnEx3nY8UkyLQYkbhCFuk8U9ClEThea/osEVRw72o+VLXtI/nHNJqoBsfm6+ePI/yRkTvqE2ZEcSnCtc8CkfCAh0hoQJVyL8APpuaB36kD6MrH+IZkCjNjmbHM6zXnPpPHJt7JTQhAzCgFwnXCS3ALOoZjFGdomZiNf7bxRv77kZ89V2Ocb7cVdYeSNAwHHr1Glvz2AZAf79hoJcM+3Vd1jo2HhPrmflGInLRYe4aKihTYTrHa619SvVHqL7awtpI01+JtSegJ+ApdnELgLAtO8cwKLjItxNPdHd9QuhDwKna0j4Bq7Z9cR+o2uxT9100MQuG4LYrgoVi/JHHvljVieWOQxqzjECUqm8x+VloQnt7Rb5Vhn69b0TGEfm4N00eRvjsuhLVfsS+4O5VZTkE5kgKupxdz85nDaocDh/nXkVM6aBlTQ13KlY7pilobMv1qXZxR7QTSc8sCd87hE/UDz4xDMeXuBfkLCbvRFfXH2cG5RAXYTpbmI3EGIl3gH/D6IL5fdHdrsoFukUZYvDeFFXNTvoQW2jURW+uUW6NyExstkN/Hu+Kyh+YeuTXikjg+04XlHyhCCsqd1vZ5nvIHUB8XY5SntFqUuRsw02rIbm/u6hcij1jfVbhZqS+YvZfsLDHPl5PN9oXtNOfGT1sNXo8bbmXSo95zcXCLDw3EZdsKP6XmogjipYwf8hPLdCxfUfyA4ictuX0GxUk/iqmOHK4VA3m3RyRefQdAY5ZW4Bzc6++GJpaqxSKXVmP+bQZhay06ONryZzZEnk3L8pDXuaYRFFDZCDogN15T0oSeiWlXvOMDZvqmCRdPEB0P6ZWEpScSenf5zuGyDUqggdSqzdEAEYVRq+duh2K+whotb8ihVUgFQKaDYZooExzapwSpA==212FD3x19z9sWBHDJACbC00B75E" "https://api.tdameritrade.com/v1/marketdata/chains?apikey=2HYD7NRWUCZZ7GU3GOU7H1RFCXWQ22KS&symbol=MMM"
+
+Resource Summary
+
+Security
+
+OAuth 2.0
+
+Content Type
+
+
+application/json
+Response Summary
+
+    JSON
+    Schema
+
+  "close": 0,
+
+  "delayed": false,
+
+  "description": "string",
+
+  "exchangeName": "'IND' or 'ASE' or 'NYS' or 'NAS' or 'NAP' or 'PAC' or 'OPR' or 'BATS'",
+
+  "fiftyTwoWeekHigh": 0,
+
+  "fiftyTwoWeekLow": 0,
+
+  "highPrice": 0,
+
+  "last": 0,
+
+  "lowPrice": 0,
+
+  "mark": 0,
+
+  "markChange": 0,
+
+  "markPercentChange": 0,
+
+  "openPrice": 0,
+
+  "percentChange": 0,
+
+  "quoteTime": 0,
+
+  "symbol": "string",
+
+  "totalVolume": 0,
+
+  "tradeTime": 0
+
+}
+
+ //ExpirationDate:
+
+{
+
+  "date": "string"
+
+}
+
+ //OptionDeliverables:
+
+{
+
+  "symbol": "string",
+
+  "assetType": "string",
+
+  "deliverableUnits": "string",
+
+  "currencyType": "string"
+
+}
+
+Resource Error Codes
+
+HTTP Code
+
+
+Description
+
+400
+
+
+An error message indicating the caller must pass a non null value in the parameter.
+
+401
+
+
+Unauthorized
+
+403
+
+
+Forbidden
+
+404
+
+
+An error message indicating optionchain for the symbol was not found.
+
+500
+
+
+An error message indicating internal error in the service.

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+    <!-- [START css] -->
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- [END css] -->
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+      <!--blockquote {-->
+        <!--margin-bottom: 10px;-->
+        <!--border-left-color: #bbb;-->
+      <!--}-->
+      <!--form {-->
+        <!--margin-top: 10px;-->
+      <!--}-->
+      <!--.form-signin input[type="text"] {-->
+        <!--font-size: 16px;-->
+        <!--height: auto;-->
+        <!--margin-bottom: 15px;-->
+        <!--padding: 7px 9px;-->
+      <!--}-->
+      .row {
+        margin-left: 0px;
+        margin-top: 10px;
+        overflow: scroll;
+      }
+
+    /* right-align monetary amounts */
+    td[dma] {
+      text-align: right;
+    }
+
+    /* make the cells output their value */
+    td[dma]:after {
+      content: attr(dma);
+    }
+
+    /* make debit amounts show up in red */
+    td[dma^="-"]:after {
+      color: red;
+    }
+
+
+    </style>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">App Engine Sevron Option Screener 191006</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h5>{{ localDatetime }} Eastern Time</h5>
+    <!--<div>-->
+    <table border="1">
+        <tr>
+            <form action="/addRemUpdTicker" method="post">
+                <td>
+                    <input type="submit" class="btn btn-small btn-primary" value="Maintain Ticker List">
+                </td>
+            </form>
+            <td><span title="I am hovering over the text">Click to update now:</span></td>
+            <form action="/updateTicker" method="post">
+                {% for t in tickers %}
+                <td><input type="submit" name="toUpdate" class="btn btn-small btn-primary"
+                           value="{{t.symbol ~ spacer ~ t.shareChange}}"
+                           style="color:{{t.color}}">
+                </td>
+                {% endfor %}
+            </form>
+        </tr>
+    </table>
+    <hr>
+    <h3>Calls</h3>
+    <form action="/updateShowHide" method="post">
+        <table border="1">
+            <tr>
+                <td style="text-align:center">
+                    <input type="submit" name="updateShowHide" class="btn-multi" value="Update">
+                </td>
+                {% for t in tickers %}
+                <td>
+                    {{t.symbol}}
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td style="text-align:center">
+                    Show
+                </td>
+                {% for t in tickers %}
+                <td style="text-align:center">
+                    {% if t.colorShow|string() == "True" %}
+                    <input type="radio" name={{t.symbol}} value="Show" checked="Checked"><BR>
+                    {% else %}
+                    <input type="radio" name={{t.symbol}} value="Show"><BR>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td style="text-align:center">
+                    Hide
+                </td>
+                {% for t in tickers %}
+                <td style="text-align:center">
+                    {% if t.colorShow|string() == "True" %}
+                    <input type="radio" name={{t.symbol}} value="Hide"><BR>
+                    {% else %}
+                    <input type="radio" name={{t.symbol}} value="Hide" checked="Checked"><BR>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </form>
+
+    <table border="1">
+        <tr>
+            <form action="/sortColumn" method="post">
+                {% for variable, text, vformat, button in dashboardContentCall %}
+                <th>
+                    {% if button == "Yes" %}
+                    {% if variable == sc.sortColumn %}
+                    <button type="submit" name="Sort" class="btn-multi btn-sorted" value="{{variable}}"> {{ text }}
+                    </button>
+                    {% else %}
+                    <button type="submit" name="Sort" class="btn-multi" value="{{variable}}"> {{ text }}</button>
+                    {% endif %}
+                    {% else %}
+                    {{ text }}
+                    {% endif %}
+                </th>
+                {% endfor %}
+            </form>
+        </tr>
+        {% for tr in transactionsC %}
+        <tr>
+            {% for variable, text, vformat, button in dashboardContentCall %}
+            {% if tr[variable] %}
+            {% if variable == "Strike" %}
+            <td align="center" class="c2" style="font-weight:bold">{{ vformat | format(tr[variable]) }}</td>
+            {% else %}
+            <td align="center" class="c2">{{ vformat | format(tr[variable]) }}</td>
+            <!--<td align="center" dma={{ vformat | format(tr[variable]) }} class="c2"></td>-->
+            {% endif %}
+            {% else %}
+            <td align="center" class="c2"></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+
+    <h3>Puts</h3>
+    <form action="/updateShowHide" method="post">
+        <table border="1">
+            <tr>
+                <td style="text-align:center">
+                    <input type="submit" name="updateShowHide" class="btn-multi" value="Update">
+                </td>
+                {% for t in tickers %}
+                <td>
+                    {{t.symbol}}
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td style="text-align:center">
+                    Show
+                </td>
+                {% for t in tickers %}
+                <td style="text-align:center">
+                    {% if t.colorShow|string() == "True" %}
+                    <input type="radio" name={{t.symbol}} value="Show" checked="Checked"><BR>
+                    {% else %}
+                    <input type="radio" name={{t.symbol}} value="Show"><BR>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td style="text-align:center">
+                    Hide
+                </td>
+                {% for t in tickers %}
+                <td style="text-align:center">
+                    {% if t.colorShow|string() == "True" %}
+                    <input type="radio" name={{t.symbol}} value="Hide"><BR>
+                    {% else %}
+                    <input type="radio" name={{t.symbol}} value="Hide" checked="Checked"><BR>
+                    {% endif %}
+                </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </form>
+
+    <table border="1">
+        <tr>
+            <form action="/sortColumn" method="post">
+                {% for variable, text, vformat, button in dashboardContentPut %}
+                <th>
+                    {% if button == "Yes" %}
+                    {% if variable == sc.sortColumn %}
+                    <button type="submit" name="Sort" class="btn-multi btn-sorted" value="{{variable}}"> {{ text }}
+                    </button>
+                    {% else %}
+                    <button type="submit" name="Sort" class="btn-multi" value="{{variable}}"> {{ text }}</button>
+                    {% endif %}
+                    {% else %}
+                    {{ text }}
+                    {% endif %}
+                </th>
+                {% endfor %}
+            </form>
+        </tr>
+        {% for tr in transactionsP %}
+        <tr>
+            {% for variable, text, vformat, button in dashboardContentPut %}
+            {% if tr[variable] %}
+            {% if variable == "Strike" %}
+            <td align="center" class="c2" style="font-weight:bold">{{ vformat | format(tr[variable]) }}</td>
+            {% else %}
+            <td align="center" class="c2">{{ vformat | format(tr[variable]) }}</td>
+            {% endif %}
+            {% else %}
+            <td align="center" class="c2"></td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
+{% endautoescape %}

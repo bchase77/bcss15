@@ -8,12 +8,21 @@
 <form action="/" method="get">
     <input type="submit" class="btn btn-small btn-primary" value="Back to Main">
 </form>
-<br>
+<form action="/addRemUpdTicker" method="post">
+<caption align="bottom" style="text-align:left">
+    <br>
+    <!--<form action="/remTicker" method="post">-->
+    Select below before clicking the Add Ticker button:
+    <BR>
+    <input type="radio" name="ViewDelete" id="View" value="View" checked="Checked"> VIEW </input><BR>
+    <input type="radio" name="ViewDelete" id="Edit" value="Edit"> EDIT </input><BR>
+    <input type="radio" name="ViewDelete" id="Delete" value="Delete"> DELETE</input><BR>
+    <BR>
+</caption>
 Enter ticker into field and click ADD TICKER. It will be checked to see if it's an option-tradable security.
 <br>
 Tickers being tracked:
 <div class="row">
-
 
     <table border="1" align="left">
         <tr>
@@ -22,12 +31,11 @@ Tickers being tracked:
             <th>my Cost</th>
             <th>my Acq Date</th>
         </tr>
-        <form action="/addRemUpdTicker" method="post">
             <tr>
                 <td>
                     <!--<div><textarea name="addTicker" class="input-block-level" rows="1"></textarea>-->
                     <textarea name="AddTicker" style="width:50px;" class="input-block-level" rows="1"></textarea>
-                    <input type="submit" class="btn btn-small btn-primary" value="Add Ticker">
+                    <input name="EnteredTicker" type="submit" class="btn btn-small btn-primary" value="Add Ticker">
                     <!--</form>-->
                 </td>
                 <!--<form action="/remTicker" method="post">-->
@@ -43,25 +51,15 @@ Tickers being tracked:
             </tr>
             {% for t in tickers | sort(attribute='symbol') %}
             <tr>
-                <td><input name="buttonticker" type="submit" value="{{ t.symbol }}"/></td>
+                <td><input name="buttonticker" type="submit" id="bob" value="{{ t.symbol }}"/></td>
                 <td>{{ t.myQty }}</td>
                 <td>{{ t.myCost }}</td>
                 <td>{{ t.myAcqDate }}</td>
                 <!--</form>-->
             </tr>
             {% endfor %}
-            <caption align="bottom" style="text-align:left">
-                <br>
-                <!--<form action="/remTicker" method="post">-->
-                Select below before clicking a button:
-                <BR>
-                <input type="radio" name="ViewDelete" value="View" checked="Checked"> VIEW <BR>
-                <input type="radio" name="ViewDelete" value="Edit"> EDIT <BR>
-                <input type="radio" name="ViewDelete" value="Delete"> DELETE<BR>
-                <BR>
-        </caption>
-        </form>
     </table>
 </div>
+</form>
 </body>
 </html>
